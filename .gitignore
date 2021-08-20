@@ -103,3 +103,6 @@ ENV/
 *.vscode
 startup.sh
 startup.bat
+
+# pytest
+.pytest_cache/
