@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="monopy",
-    version="0.0.1",
+    version="1.0.0",
     author="Emmanuel Okwudike",
     author_email="okwudike.emmanuel@gmail.com",
     description="a",
