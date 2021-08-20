@@ -8,7 +8,7 @@ setuptools.setup(
     version="1.0.0",
     author="Emmanuel Okwudike",
     author_email="okwudike.emmanuel@gmail.com",
-    description="a",
+    description="a python wrapper for the Mono API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license='MIT',
