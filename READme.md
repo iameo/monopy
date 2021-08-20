@@ -85,9 +85,7 @@ py_acc.information(id='xxxxxxxxxx')
 {
     "meta": {
         "data_status": "AVAILABLE", 
-         // Available, Processing, Failed
         "auth_method": "mobile_banking" 
-      	 // mobile_banking, internet_banking
     },
     "account": {
         "_id": "5feec8ce95e8dc6axxxxxx",
@@ -95,7 +93,6 @@ py_acc.information(id='xxxxxxxxxx')
             "name": "GTBank",
             "bankCode": "058",
             "type": "PERSONAL_BANKING"
-          // or BUSINESS_BANKING
         },....}
 }
 ```
