@@ -38,3 +38,12 @@ def test_institutions(mono_instance):
     '''
     status, response = mono_instance.institutions()
     assert status and len(response) >= 1 #at least one or more info present
+
+
+def test_business_lookup(mono_instance):
+    '''
+    test the business lookup endpoint to fetch information about a company
+    '''
+    # I noticed if name isn't in the db -> Response 504 [time out]
+    status, response = mono_instance.business_lookup(name='polaris bank')
+    assert status and response[0]['status'] #status -> ACTIVE or INACTIVE 
