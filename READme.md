@@ -1,4 +1,4 @@
-## PyMono
+## MonoPY
 
 [Unofficial] python wrapper for making requests to the [Mono](https://mono.co/) API and a webhook implementation.
 
