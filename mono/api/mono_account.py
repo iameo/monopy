@@ -1,12 +1,13 @@
 from .base_api import BaseAPI
 
 class Account(BaseAPI):
-    def information(self, id):
+    def information(self, **kwargs):
         '''
         This resource represents the account details with the financial institution.
         params:
             - id: Account ID returned from token exchange
         '''
+        id = kwargs.pop('id')
 
         url = self._BASE_URL + f'/accounts/{id}'
         status, response = self._make_request('GET', url)
