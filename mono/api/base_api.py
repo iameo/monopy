@@ -50,4 +50,4 @@ class BaseAPI:
 
 
     def __repr__(self):
-        return 'MonopyAPI <%r>' % self._mono_sec_key[:5]
+        return '%s <%r>' % (self.__class__.__name__, self._mono_sec_key[:5])
