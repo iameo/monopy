@@ -40,7 +40,7 @@ class BaseAPI:
         request = http_methods.get(method, None)
 
         if request is None:
-            raise HttpMethodException('unrecognize method. you may only use POST, GET, PUT or DELETE')
+            raise HttpMethodException('unrecognized method; you may only use POST, GET, PUT or DELETE')
 
         response = request(headers=self._headers(), url=url, params=params)
 
