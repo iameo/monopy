@@ -31,7 +31,7 @@ class UserMono(BaseAPI):
             Amount: The monthly salary/income
             Confidence: Confidence value in the predicted income
         '''
-        id = kwargs['id']
+        id = kwargs.pop('id')
         url = self._BASE_URL + f'accounts/{id}/income'
 
         status, response = self._make_request('GET', url)
@@ -48,7 +48,7 @@ class UserMono(BaseAPI):
             Not all banks will return the identity information. See here https://docs.mono.co/docs/bvn-coverage
         '''
 
-        id = kwargs['id']
+        id = kwargs.pop('id')
 
         url = self._BASE_URL + f'/accounts/{id}/identity'
         status, response = self._make_request('GET', url)
