@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     license='MIT',
-    keywords='mono pywrapper api',
+    keywords='monopy pywrapper fintech api',
     url="https://github.com/iameo/monopy",
     project_urls={
         "Bug Tracker": "https://github.com/iameo/monopy/issues",
