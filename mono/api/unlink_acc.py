@@ -8,7 +8,7 @@ class UnlinkAccount(BaseAPI):
         params:
             - id: account id
         '''
-        id = kwargs['id']
+        id = kwargs.pop('id')
         url = f'https://api.withmono.com/accounts/{id}/unlink'
 
         status, response = self._make_request('POST', url)
