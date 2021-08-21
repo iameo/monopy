@@ -12,7 +12,7 @@ class BaseAPI:
     """
     _BASE_URL = 'https://api.withmono.com'
 
-    def __init__(self, mono_sec_key: None = None) -> None:
+    def __init__(self, mono_sec_key: str = None) -> None:
         if mono_sec_key is None:
             raise MonoAuthException('your mono secret key is required.')
 
