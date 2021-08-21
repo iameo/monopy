@@ -21,6 +21,14 @@ You would need to get your mono secret key [here](https://mono.co), and then mov
 pip install pymono
 ```
 
+#### SET YOUR KEYS IN YOUR ENVIRONMENT
+
+Open up your CMD (replace ```set``` with ```export``` if you are on MAC/LINUX)
+
+```cmd
+set TEST_MONO_SEC_KEY='test_sk_xxxxxxxxxxxxxx'
+set acc_ID='xxxxxxxxxxxxxxxxx'
+```
 
 #### #Making Requests
 
