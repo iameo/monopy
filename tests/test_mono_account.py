@@ -6,8 +6,8 @@ from mono.api.mono_account import Account
 from mono.api.errors import MonoAPIException
 
 
-TEST_MONO_SEC_KEY = 'test_sk_xxxxxxxxxxxx'
-acc_ID = 'xxxxxxxxxxxxxxx'
+TEST_MONO_SEC_KEY = os.environ.get('TEST_MONO_SEC_KEY')
+acc_ID = os.environ.get('acc_ID')
 
 
 @pytest.fixture(scope="module")
