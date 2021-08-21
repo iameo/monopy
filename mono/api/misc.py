@@ -18,7 +18,7 @@ class Misc(BaseAPI):
         '''
         This resource returns the information of a business
         params:
-            - name: this should be the name of the company
+            - name: name of the company you want to lookup
         Response:
         Business details (200 status code)
         Empty json (400 status code)
