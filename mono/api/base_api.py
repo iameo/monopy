@@ -28,7 +28,7 @@ class BaseAPI:
 
     def _make_request(self, method, url, **kwargs):
 
-        http_methods = {
+        HTTP_METHODS = {
             'GET': requests.get,
             'POST': requests.post,
             'PUT': requests.put,
@@ -37,7 +37,7 @@ class BaseAPI:
 
         params = kwargs.get('params', None)
 
-        request = http_methods.get(method, None)
+        request = HTTP_METHODS.get(method, None)
 
         if request is None:
             raise HttpMethodException('unrecognized HTTP method; you may only use POST, GET, PUT or DELETE')
