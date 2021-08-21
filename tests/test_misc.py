@@ -5,7 +5,8 @@ import random
 from mono.api.misc import Misc
 from mono.api.errors import MonoAuthException
 
-TEST_MONO_SEC_KEY = 'test_sk_xxxxxxxxxxxxx'
+
+TEST_MONO_SEC_KEY = os.environ.get('TEST_MONO_SEC_KEY')
 
 
 @pytest.fixture(scope='module')
