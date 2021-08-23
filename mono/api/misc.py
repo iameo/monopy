@@ -27,4 +27,14 @@ class Misc(BaseAPI):
         url = self._BASE_URL + '/v1/cac/lookup'
         status, response = self._make_request('GET', url, params=kwargs)
         return status, response
-        
+
+    def shareholder_lookup(self, **kwargs):
+        '''
+        This response returns the information of the shareholder of a business
+        params:
+            - id: obtained from the business lookup endpoint
+        '''
+
+        id = kwargs.pop('id', None)
+        url = self._BASE_URL + f'/v1/cac/company/{id}'
+        status, response = self._make_request('GET', url)
