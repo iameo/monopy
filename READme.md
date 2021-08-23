@@ -27,7 +27,7 @@ Open up your CMD (replace ```set``` with ```export``` if you are on MAC/LINUX)
 
 ```cmd
 set TEST_MONO_SEC_KEY=test_sk_xxxxxxxxxxxxxx
-set acc_ID='xxxxxxxxxxxxxxxxx'
+set acc_ID=xxxxxxxxxxxxxxxxx
 ```
 
 #### #Making Requests
