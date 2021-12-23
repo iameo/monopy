@@ -31,5 +31,13 @@ class DirectPay(BaseAPI):
         return status, response
 
 
-
-
+    def status(self, **kwargs):
+        '''
+        This resource checks payment status using the reference number.
+        params:
+            - reference: Reference passed when initiating payment
+        '''
+        url = self._BASE_URL + '/v1/payments/verify'
+        
+        status, response = self._make_request('POST', url, json=kwargs)
+        return status, response     
