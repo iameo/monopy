@@ -5,14 +5,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="monopy",
-    version="1.0.1",
+    version="1.0.2",
     author="Emmanuel Okwudike",
     author_email="okwudike.emmanuel@gmail.com",
     description="a python wrapper for the Mono API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license='MIT',
-    keywords='monopy pywrapper fintech api',
+    keywords='monopy pywrapper fintech api monong',
     url="https://github.com/iameo/monopy",
     project_urls={
         "Bug Tracker": "https://github.com/iameo/monopy/issues",
