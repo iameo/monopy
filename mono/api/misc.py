@@ -38,3 +38,4 @@ class Misc(BaseAPI):
         id = kwargs.pop('id', None)
         url = self._BASE_URL + f'/v1/cac/company/{id}'
         status, response = self._make_request('GET', url)
+        return status, response
