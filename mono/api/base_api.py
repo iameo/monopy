@@ -36,13 +36,15 @@ class BaseAPI:
         }
 
         params = kwargs.get('params', None)
+        json = kwargs.get('json', None)
 
         request = HTTP_METHODS.get(method, None)
 
         if request is None:
             raise HttpMethodException('unrecognized HTTP method; you may only use POST, GET, PUT or DELETE')
 
-        response = request(headers=self._headers(), url=url, params=params)
+        response = request(headers=self._headers(), url=url, params=params, json=json)
+
 
         if response.status_code >= 400:
             return response.status_code, response.json()
