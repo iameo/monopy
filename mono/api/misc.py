@@ -39,3 +39,15 @@ class Misc(BaseAPI):
         url = self._BASE_URL + f'/v1/cac/company/{id}'
         status, response = self._make_request('GET', url)
         return status, response
+
+    def view360(self, **kwargs):
+        '''
+        This resource returns all the financial accounts that are linked to the BVN specified
+        params:
+            - bvn: The BVN of the accounts you'd like to retrieve
+        '''
+        url = self._BASE_URL + '/360view'
+        
+        status, response = self._make_request('POST', url, json=kwargs)
+        return status, response
+
