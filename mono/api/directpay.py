@@ -13,6 +13,23 @@ class DirectPay(BaseAPI):
 
         return status, response
 
+    def pay(self, **kwargs):
+        '''
+        This resource initializes payment.
+        params:
+            - amount: amount in kobo (>= 200)
+            - description: description of the payment
+            - type: payment type (onetime-debit)
+            - reference: unqiue reference (auto-generated)
+        '''
+        url = self._BASE_URL + '/v1/payments/initiate'
+
+        #auto generate the reference key
+        kwargs.update({'reference': get_reference()})
+
+        status, response = self._make_request('POST', url, json=kwargs)
+        return status, response
+
 
 
 
