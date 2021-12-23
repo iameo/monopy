@@ -34,7 +34,7 @@ set acc_ID=xxxxxxxxxxxxxxxxx
 
 
 ```python
-from pymono import Account, UserMono, Misc
+from pymono import Account, UserMono, Misc, DirectPay
 ```
 
 ### User Client
