@@ -18,7 +18,7 @@ You would need to get your mono secret key [here](https://mono.co), and then mov
 
 ### Installation & Usage Guide
 ```
-pip install pymono
+pip install monopy
 ```
 
 #### SET YOUR KEYS IN YOUR ENVIRONMENT
@@ -34,7 +34,7 @@ set acc_ID=xxxxxxxxxxxxxxxxx
 
 
 ```python
-from pymono import Account, UserMono, Misc, DirectPay
+from mono.api import Account, UserMono, Misc, DirectPay
 ```
 
 ### User Client
