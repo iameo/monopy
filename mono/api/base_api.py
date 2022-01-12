@@ -47,7 +47,6 @@ class BaseAPI:
 
         try:
             response = request(headers=self._headers(), url=url, params=params, json=json)
-            print("===>", response)
         except ConnectionError as e:
             return 502, f'Connection Error: {e}'
         except ConnectTimeout as e:
