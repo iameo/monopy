@@ -4,6 +4,8 @@ import requests
 
 
 from .errors import MonoAuthException, HttpMethodException
+from requests.exceptions import ConnectTimeout, ConnectionError
+
 
 
 class BaseAPI:
@@ -43,12 +45,15 @@ class BaseAPI:
         if request is None:
             raise HttpMethodException('unrecognized HTTP method; you may only use POST, GET, PUT or DELETE')
 
-        response = request(headers=self._headers(), url=url, params=params, json=json)
-
-
-        if response.status_code >= 400:
+        try:
+            response = request(headers=self._headers(), url=url, params=params, json=json)
+            print("===>", response)
+        except ConnectionError as e:
+            return 502, f'Connection Error: {e}'
+        except ConnectTimeout as e:
+            return 599, f'Connection Timeout: {e}'
+        else:
             return response.status_code, response.json()
-        return response.status_code, response.json()
 
 
     def __repr__(self):
