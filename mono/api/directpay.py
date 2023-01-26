@@ -2,7 +2,7 @@ from mono.api.utils import get_reference
 from .base_api import BaseAPI
 
 class DirectPay(BaseAPI):
-    def institutions(self, **kwargs):
+    def institutions(self):
         '''
         This resource returns DirectPay institutions.
         
@@ -21,12 +21,15 @@ class DirectPay(BaseAPI):
             - description: description of the payment
             - type: payment type (onetime-debit)
             - reference: unqiue reference (auto-generated)
+            - own_ref: True if reference is self generated (by api user) else False
         '''
         url = self._BASE_URL + '/v1/payments/initiate'
 
-        #auto generate the reference key
-        kwargs.update({'reference': get_reference()})
+        own_ref = kwargs.get('own_ref', False)
 
+        if not own_ref:
+            #auto generate the reference key
+            kwargs.update({'reference': get_reference()})
         status, response = self._make_request('POST', url, json=kwargs)
         return status, response
 
